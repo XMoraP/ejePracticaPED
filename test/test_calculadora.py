@@ -7,6 +7,11 @@ class Test(unittest.TestCase):
 		precioYDescuento = [100, 10]
 		resultado = calculadora.calcularPorcentaje(precioYDescuento)
 		self.assertEqual(90, resultado)
+		
+	def testDescuentoPorcentajeFijo(self):
+		precio = 100
+		resultado = calculadora.aplicarDescuentofijo(precio)
+		self.assertEqual(80, resultado)
 
 if __name__ == '__main__':
 	unittest.main()
